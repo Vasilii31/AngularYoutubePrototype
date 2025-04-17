@@ -1,0 +1,12 @@
+.task-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: row;
+  }
+  .task-card.done {
+    background-color: #e0ffe0;
+  }

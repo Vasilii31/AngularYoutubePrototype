@@ -1,0 +1,14 @@
+<p>{{title}} - {{pageType}} </p>
+
+
+<p><button (click)="changeLogo()">Change Logo</button></p>
+
+<!-- Two way binding-->
+<p><input type="text" [(ngModel)]="pageType"></p>
+
+<p>Nombre de clicks {{clickCount}}</p>
+<button (click)="changeVisibility()">Afficher / Cacher</button>
+
+<p>
+    <img [hidden]="!imageVisible" [src]="path" alt="logo">
+</p>

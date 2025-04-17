@@ -1,0 +1,40 @@
+<div >
+    <input type="text" [(ngModel)]="taskCreate.name">
+    <button type="button" (click)="AddTaskToList()">Ajouter à la liste</button>
+
+</div>
+
+<div>
+    <p>TACHES A FAIRE</p>
+
+    <ul>
+        @for (task of TodoList; track $index) 
+        {
+            @if (task.done == false) {
+
+                <app-task-card 
+                    [task]="task" 
+                    (done)="onTaskDone($event)">
+                </app-task-card>
+            }
+            
+        }
+    </ul>
+</div>
+
+<div>
+    <p>TACHES TERMINEES</p>
+    <ul>
+        @for (task of TodoList; track $index) 
+        {
+            @if (task.done == true) {
+
+                <app-task-card 
+                    [task]="task" 
+                    (done)="onTaskDone($event)">
+                </app-task-card>
+            }
+            
+        }
+    </ul>
+</div>

@@ -1,0 +1,11 @@
+<div class="task-card" [ngClass]="{'done': task()?.done}">
+    <h3>{{ task()?.name }}</h3>
+  
+    <label>
+      <input type="checkbox" [checked]="task()?.done" disabled>
+    </label>
+  
+    <button (click)="markAsDone()" [disabled]="task()?.done">
+      {{ task()?.done ? 'Fait ✅' : 'Marquer comme fait' }}
+    </button>
+  </div>
