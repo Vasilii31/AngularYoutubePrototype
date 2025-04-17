@@ -6,3 +6,7 @@ export interface Article {
     dateCreation: Date;
     stock: number;
 }
+
+
+
+      
